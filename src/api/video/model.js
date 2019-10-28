@@ -3,7 +3,7 @@ const mongo = require("../../db");
 
 const VideoSchema = new Schema({
   title: { type: String, default: "Video sem título" },
-  url: String,
+  youtubeId: String,
   thumbnail: String,
   likes: { type: Number, default: 0 },
   unlikes: { type: Number, default: 0 },

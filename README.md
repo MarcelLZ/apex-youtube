@@ -4,7 +4,7 @@ Simple API built to _Formação FrontEnd_ course.
 
 ## Routes
 
-- [GET] /video/:id - Bring video data based on ID param
+- [GET] /video/:youtubeId - Bring video data based on YOUTUBE ID param
 - [GET] /video - Bring all videos
 - [POST] /video - Add a new video ({ title, url, thumbnail })
 - [POST] /video/comment/:id - Add a new comment ({ comment })

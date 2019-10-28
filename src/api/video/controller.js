@@ -1,8 +1,9 @@
 const VideoModel = require("./model");
 
+/** Search for a specific video base on youtube id */
 const findOne = async ({ params }, res) => {
-  const { id } = params;
-  const foundVideo = await VideoModel.findById(id);
+  const { youtubeId } = params;
+  const foundVideo = await VideoModel.find({ youtubeId });
   res.json({ data: foundVideo });
 };
 

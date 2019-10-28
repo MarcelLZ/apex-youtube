@@ -11,8 +11,8 @@ const {
   addComment
 } = require("./controller");
 
+routes.get("/:youtubeId", findOne);
 routes.get("/", findAll);
-routes.get("/:id", findOne);
 routes.post("/", create);
 routes.put("/like/:id", like);
 routes.put("/unlike/:id", unlike);
