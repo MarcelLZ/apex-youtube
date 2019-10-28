@@ -1,7 +1,13 @@
 const VideoModel = require("./model");
 
+const findOne = async ({ params }, res) => {
+  const { id } = params;
+  const foundVideo = await VideoModel.findById(id);
+  res.json({ data: foundVideo });
+};
+
 /** search for all videos */
-const findAll = async ({ params }, res) => {
+const findAll = async (_, res) => {
   const foundVideos = await VideoModel.find();
   res.json({ data: foundVideos });
 };
@@ -48,6 +54,7 @@ const addComment = async ({ params, body }, res) => {
 };
 
 module.exports = {
+  findOne,
   findAll,
   create,
   like,
